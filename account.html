@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Account</title>
+  </head>
+  <body>
+    <main class="flex flex-col justify-center gap-y-20">
+      <section class="container mx-auto mt-24">
+        <h1 class="text-center font-extrabold text-8xl text-yellow-800 mb-16">
+          Hello <span id="name"></span>
+        </h1>
+        <div class="grid grid-cols-3 gap-x-20">
+          <div
+            class="bg-red-400 h-52 rounded-lg flex items-center justify-center text-4xl text-zinc-50 flex-col gap-y-4"
+          >
+            <h3>Deposit</h3>
+            <h3>$<span id="dep-amount">00</span></h3>
+          </div>
+          <div
+            class="bg-green-400 h-52 rounded-lg flex flex-col items-center justify-center text-4xl text-zinc-50 gap-y-4"
+          >
+            <h3>Withdraw</h3>
+            <h3>$ <span id="with-amount">00</span></h3>
+          </div>
+          <div
+            class="bg-purple-400 h-52 rounded-lg flex flex-col items-center justify-center text-4xl text-zinc-50 gap-y-4"
+          >
+            <h3>Balance</h3>
+            <h3>$ <span id="balance-amount">00</span></h3>
+          </div>
+        </div>
+      </section>
+      <section class="container mx-auto grid grid-cols-2 gap-x-20">
+        <div class="bg-pink-500 rounded-lg p-8">
+          <h3 class="text-3xl text-zinc-50 mb-5">Please Deposit</h3>
+          <input
+            class="block w-4/5 h-10 rounded-md px-4"
+            type="text"
+            name=""
+            id="depo-field"
+            placeholder="$ Amount You wanna deposit"
+          />
+          <button
+            class="inline-block bg-orange-400 px-5 py-2 mt-5 rounded-md btn"
+            id="dep-btn"
+          >
+            Deposit
+          </button>
+        </div>
+        <div class="bg-blue-400 rounded-lg p-8">
+          <h3 class="text-3xl text-zinc-50 mb-5">Please Withdraw</h3>
+          <input
+            class="block w-4/5 h-10 rounded-md px-4"
+            type="text"
+            name=""
+            id="depo-field"
+            placeholder="$ Amount You wanna withdraw"
+          />
+          <button
+            class="inline-block bg-orange-400 px-5 py-2 mt-5 rounded-md btn"
+          >
+            Withdraw
+          </button>
+        </div>
+        <div>
+          <button
+            class="inline-block bg-cyan-400 px-10 py-4 mt-5 rounded-md text-violet-50 font-bold text-lg"
+            id="logout-btn"
+            onclick="logout()"
+          >
+            Logout
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/account.js"></script>
+  </body>
+</html>
